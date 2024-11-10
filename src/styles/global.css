@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border font-notoSanThai;
+  }
+
+  body {
+    @apply bg-gray-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-light;
+  }
+
+  h1 {
+    @apply text-clampH1;
+  }
+  h2 {
+    @apply text-clampH2;
+  }
+  h3 {
+    @apply text-clampH3;
+  }
+  h4 {
+    @apply text-clampH4;
+  }
+  h5 {
+    @apply text-clampH5;
+  }
+  h6 {
+    @apply text-clampH6;
+  }
+}
+
+@layer components {
+  .wrap-item-center {
+    @apply w-full flex flex-wrap;
+  }
+
+  .card-main {
+    @apply p-5 m-5 bg-white rounded-md;
+  }
+
+  .pad-main {
+    @apply pt-3 px-2;
+  }
+
+  .container-title {
+    @apply min-h-[54px] border-b-2 border-gray-300 border-opacity-30 flex flex-wrap justify-between pb-3 gap-y-2;
+  }
+
+  .container-btn {
+    @apply w-full flex flex-wrap justify-center gap-4;
+  }
+
+  .input-group {
+    @apply mb-3 flex flex-col;
+  }
+
+  .input-group input {
+    @apply border-2 rounded-[5px] p-2 text-[14px] outline-none focus:shadow-sm border-gray-100 focus:shadow-gray-300;
+  }
+
+  .input_success {
+    @apply flex w-full items-center justify-center rounded-md border bg-white/0 py-[8px] px-[8px] outline-none !border-green-500 !text-green-500 font-light;
+  }
+
+  .input_error {
+    @apply flex w-full items-center justify-center rounded-md border bg-white/0 py-[8px] px-[8px] outline-none !border-red-500 !text-red-500 font-light;
+  }
+
+  .input_disabled {
+    @apply flex w-full items-center justify-center rounded-md border bg-white/0 py-[8px] px-[8px] outline-none border-gray-300 !bg-gray-100 cursor-not-allowed focus:invisible font-light;
+  }
+
+  .upload-area {
+    @apply w-full cursor-pointer rounded-[10px] border-2 border-dashed h-[250px] flex flex-col justify-center items-center;
+  }
+
+  .upload-area i {
+    @apply text-[48px] text-gray-300;
+  }
+
+  .preview-img {
+    @apply w-fit object-contain h-[250px] rounded-[10px];
+  }
+}
